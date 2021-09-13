@@ -45,7 +45,7 @@ def calcGS(sprints: list) -> int:
     return average/2
 
 
-def calcMedia(finalCheckpoint: int, finalChallenge: int, finalGS: int):
+def calcMS(finalCheckpoint: int, finalChallenge: int, finalGS: int):
     """Recebe a média de checkpoints, challenges e global solution e devolve a média ponderada final.
 
     Fórmula: ((finalCheckpoint + finalChallenge) / 2 * 0.4) + (finalGS * 0.6)
