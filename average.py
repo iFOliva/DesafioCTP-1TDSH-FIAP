@@ -45,20 +45,20 @@ def calcGS(sprints: list) -> int:
     return average/2
 
 
-def calcMS(finalCheckpoint: int, finalChallenge: int, finalGS: int):
+def calcMS(checkpointAverage: int, challengeAverage: int, GSAverage: int):
     """Recebe a média de checkpoints, challenges e global solution e devolve a média ponderada final.
 
-    Fórmula: ((finalCheckpoint + finalChallenge) / 2 * 0.4) + (finalGS * 0.6)
+    Fórmula: ((checkpointAverage + challengeAverage) / 2 * 0.4) + (GSAverage * 0.6)
 
     Argumentos da função:
-    finalCheckpoint - a média aritmética dos checkpoints. Ex: 7,
-    finalChallenge - a média aritmética dos challenges. Ex: 10,
-    finalGS - a média aritmética entre as sprints da Global Solution. Ex: 8.5
+    checkpointAverage - a média aritmética dos checkpoints. Ex: 7,
+    challengeAverage - a média aritmética dos challenges. Ex: 10,
+    GSAverage - a média aritmética entre as sprints da Global Solution. Ex: 8.5
     """
 
-    firstAverage = (finalCheckpoint + finalChallenge)/2
+    firstAverage = (checkpointAverage + challengeAverage)/2
 
     msFinal = round((firstAverage
-                    * 0.4 + finalGS * 0.6), 1)
+                    * 0.4 + GSAverage * 0.6), 1)
 
     return msFinal
