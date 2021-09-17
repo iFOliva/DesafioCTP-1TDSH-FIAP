@@ -1,9 +1,9 @@
 import pandas as pd
 
-tabela = pd.read_excel("./samples/notas_planilha_pronta.xlsx")
+tabela = pd.read_excel("./samples/notas_planilha_sample.xlsx")
 
 
-def calcMSemGS(semestre1: int, checkpointAverage: int, challengeAverage: int):
+def relatorio3(semestre1: float, checkpointAverage: float, challengeAverage: float):
     """Recebe a nota do semestre 1, a média de checkpoints, challenges e retorna o nome e RM dos alunos aprovados sem a nota do Global Solutions.
     Fórmula: ((semestre1 * 0.4) + (((checkpointAverage + challengeAverage) / 2) * 0.4)* 0.6)
     Argumentos da função:
@@ -26,6 +26,3 @@ def calcMSemGS(semestre1: int, checkpointAverage: int, challengeAverage: int):
         for i in range(2, 22):
             print("O aluno(a):", tabela_nome[i], "de RM:",
                   tabela_rm[i], "passou sem precisar da nota do GS")
-
-
-calcMSemGS(10, 10, 10)
