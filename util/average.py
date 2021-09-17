@@ -64,6 +64,6 @@ def calcFinalGS(ms1: float, checkpointAverage: float, challengeAverage: float):
 
     averageWithoutGS = 0.4 * ms1 + (secondMSAverage * 0.4 * 0.6)
 
-    gs = abs(round((-averageWithoutGS + 6) / 0.36, 1))
+    gs = round((-averageWithoutGS + 6) / 0.36, 1)
 
     return gs
